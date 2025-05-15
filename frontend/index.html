@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="form-section">
+            <h2>Add Expense</h2>
+            <input type="number" id="amount" placeholder="Amount">
+            <input type="text" id="merchant" placeholder="Merchant">
+            <select id="category">
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="date" id="date">
+            <input type="file" id="receipt" accept="image/*">
+            <button onclick="addExpense()">Add Expense</button>
+            <button onclick="analyzeReceipt()">Analyze Receipt</button>
+        </div>
+        <div class="analysis-section">
+            <button onclick="getSpendingAnalysis()">View Spending Analysis</button>
+            <button onclick="getBudgetPrediction()">Predict Budget</button>
+        </div>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Merchant</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

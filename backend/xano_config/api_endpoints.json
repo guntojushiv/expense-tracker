@@ -1,0 +1,34 @@
+{
+  "endpoints": [
+    {
+      "path": "/expenses",
+      "method": "POST",
+      "description": "Add a new expense",
+      "request_body": {
+        "user_id": "integer",
+        "amount": "float",
+        "category": "string",
+        "merchant": "string",
+        "date": "date",
+        "receipt_url": "string"
+      },
+      "response": {
+        "id": "integer",
+        "status": "success"
+      }
+    },
+    {
+      "path": "/receipt/analyze",
+      "method": "POST",
+      "description": "Mock receipt analysis",
+      "request_body": {
+        "receipt_url": "string"
+      },
+      "response": {
+        "amount": 50,
+        "merchant": "Starbucks",
+        "category": "Food"
+      }
+    }
+  ]
+}
